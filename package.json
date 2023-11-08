@@ -1,0 +1,36 @@
+{
+  "name": "package-json-with-multiple-entrypoints",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsup",
+    "prepublishOnly": "pnpm run build",
+    "release": "release-it"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./client": {
+      "types": "./dist/client.d.ts",
+      "require": "./dist/client.js",
+      "import": "./dist/client.mjs"
+    },
+    "./server": {
+      "types": "./dist/server.d.ts",
+      "require": "./dist/server.js",
+      "import": "./dist/server.mjs"
+    }
+  },
+  "author": "Ivan Kalashnik <ivan@topgun.build>",
+  "license": "ISC",
+  "devDependencies": {
+    "release-it": "^16.1.5",
+    "tsup": "6.5.0",
+    "typescript": "4.9.4"
+  }
+}
