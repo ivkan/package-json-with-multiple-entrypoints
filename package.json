@@ -8,8 +8,8 @@
   "scripts": {
     "build": "tsup",
     "build:package": "node tools/prepare-package.js",
-    "clear:package": "node tools/remove-package.js",
-    "prepublishOnly": "pnpm run build && pnpm copy && pnpm build:package",
+    "clear:package": "node tools/clear-package.js",
+    "prepublishOnly": "pnpm run build && pnpm build:package",
     "release": "release-it"
   },
   "main": "index.js",
