@@ -2,10 +2,14 @@
   "name": "package-json-with-multiple-entrypoints",
   "version": "1.0.2",
   "description": "",
+  "npm": {
+    "publishPath": "dist"
+  },
   "scripts": {
-    "build": "tsup && pnpm copy && pnpm build:package",
+    "build": "tsup",
     "copy": "cp package.json README.md LICENSE ./dist",
     "build:package": "node prepare-package.js",
+    "prepublishOnly": "pnpm run build && pnpm copy && pnpm build:package",
     "release": "release-it"
   },
   "main": "index.js",
