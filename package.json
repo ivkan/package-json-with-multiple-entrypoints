@@ -6,7 +6,6 @@
     "build": "tsup && pnpm copy && pnpm build:package",
     "copy": "cp package.json README.md LICENSE ./dist",
     "build:package": "node prepare-package.js",
-    "prepublishOnly": "pnpm run build",
     "release": "release-it"
   },
   "main": "index.js",
