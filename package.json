@@ -2,13 +2,13 @@
   "name": "package-json-with-multiple-entrypoints",
   "version": "1.0.3",
   "description": "",
-  "npm": {
-    "publishPath": "dist"
+  "hooks": {
+    "after:npm:release": "pnpm run clear:package"
   },
   "scripts": {
     "build": "tsup",
-    "copy": "cp package.json README.md LICENSE ./dist",
-    "build:package": "node prepare-package.js",
+    "build:package": "node tools/prepare-package.js",
+    "clear:package": "node tools/remove-package.js",
     "prepublishOnly": "pnpm run build && pnpm copy && pnpm build:package",
     "release": "release-it"
   },
