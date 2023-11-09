@@ -1,6 +1,6 @@
 {
   "name": "package-json-with-multiple-entrypoints",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "npm": {
     "publishPath": "dist"
@@ -15,7 +15,9 @@
   "main": "index.js",
   "module": "index.mjs",
   "types": "index.d.ts",
-  "files": ["**"],
+  "files": [
+    "**"
+  ],
   "author": "Ivan Kalashnik <ivan@topgun.build>",
   "license": "ISC",
   "devDependencies": {
