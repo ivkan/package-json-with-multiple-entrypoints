@@ -1,6 +1,6 @@
 {
   "name": "package-json-with-multiple-entrypoints",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "hooks": {
     "after:npm:release": "pnpm run clear:package"
